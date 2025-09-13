@@ -52,7 +52,7 @@ export const ProjectCreateSchema = ProjectSchema.omit({
 
 // Activity schemas
 export const ActivityDataSchema = z.object({
-  measurements: z.record(z.any()),
+  measurements: z.record(z.string(), z.any()),
   notes: z.string(),
   gps: LocationSchema,
   timestamp: z.string(),
